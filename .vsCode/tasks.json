@@ -1,0 +1,58 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558 
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "g++.exe build active file",
+            "command": "D:\\MinGW\\bin\\g++.exe",
+            "args": [
+                "-g",
+                "-std=c++11",
+                "${file}",
+                // "main.cpp",
+                "-o", "${workspaceRoot}/Builds/Win_Build/${fileBasenameNoExtension}",
+                "-lmingw32",
+                "-lopengl32",
+                // "-lglew32",
+                // "-lglew32mx",
+                "-lglu32",
+                "-lgdi32",
+                "-lfreeglut",
+                // "-lSDL2main",
+                // "-lSDL2",
+                // "-lSDL2_image",
+                // "-lSDL2_ttf"    
+                // "-g",
+                // "${file}",
+                // "-o",
+                // "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "D:\\MinGW\\bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build"
+        }
+    ],
+    // "windows": {
+    //     "args": [
+    //         "-g",
+    //         "-std=c++11",
+    //         "main.cpp",
+    //         "-o", "Builds/Win_Build/${fileBasenameNoExtension}",
+    //         "-lmingw32",
+    //         "-lopengl32",
+    //         "-lglew32",
+    //         "-lglew32mx",
+    //         "-lglu32",
+    //         "-lSDL2main",
+    //         "-lSDL2",
+    //         "-lSDL2_image",
+    //         "-lSDL2_ttf"
+    //     ]
+    // }
+}
